@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LocalStorage</title>
+    <script src="LocalStorage.js"></script>
+    <style>
+    
+    div{
+        margin: 0.5%
+    }
+
+    input {
+        margin-left: 1%;
+    }
+
+    </style>
+</head>
+
+<body>
+    <h1>LocalStorage de Usuari i Contrasenya</h1>
+
+    <div id="usuario">
+        <label>Usuario:</label>
+        <input type="text" id="usuari" name="usuari"/>
+    </div>
+    <div id="contrasenya">
+        <label>Contraseña:</label>
+        <input type="password" id="password" name="password" />
+    </div>
+
+    <div id="botones">
+        <button type="button" name="register" id="register" onclick="registrar">Registrar</button>
+        <button type="button" name="login" id="login" onclick="iniciar">Iniciar Sesion</button>
+    </div>
+</body>
+
+</html>

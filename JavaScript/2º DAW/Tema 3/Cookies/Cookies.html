@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="Cookies.js"></script>
+    <title>Cookies</title>
+    <style>
+        div{
+            margin: 0.5%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo">Benvinguts a un llarg viatge</h1>
+
+    <div id="radio_button">
+        <p>Selecciona un color:</p>
+
+        <div>
+            <input type="radio" id="blau" name="drone" value="blue"/>
+            <label for="blau">Blau</label>
+        </div>
+
+        <div>
+            <input type="radio" id="roig" name="drone" value="red" />
+            <label for="roig">Roig</label>
+        </div>
+
+        <div>
+            <input type="radio" id="verd" name="drone" value="green" />
+            <label for="verd">Verd</label>
+        </div>
+        <div>
+            <input type="radio" id="purpura" name="drone" value="purple" />
+            <label for="verd">Purpura</label>
+        </div>
+
+        <button type="button" id="enviar" onclick="cambiar_color('radio_button')">Selecciona un color</button>
+    </div>
+    <div>
+        <button id="borrar">Borrar</button>
+    </div>
+</body>
+
+</html>

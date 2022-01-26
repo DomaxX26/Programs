@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reloj y Fecha</title>
+</head>
+
+<body>
+    <h1>Reloj y Fecha</h1>
+
+    <div id="laHora">
+        <script>
+            function crono() {
+
+                var miFecha = new Date();
+                console.log(miFecha.toString);
+                var horas = miFecha.getHours();
+                var minutos = miFecha.getMinutes();
+                var segundos = miFecha.getSeconds();
+                var dia = miFecha.getDate();
+                var mes = miFecha.getMonth() + 1;
+                var año = miFecha.getFullYear();
+
+                if (horas < 10) {
+                    horas = "0" + horas;
+                }
+
+                if (minutos < 10) {
+                    minutos = "0" + minutos;
+                }
+
+                if (segundos < 10) {
+                    segundos = "0" + segundos;
+                }
+
+                if (dia < 10) {
+                    dia = "0" + dia;
+                }
+
+                if (mes < 10) {
+                    mes = "0" + mes;
+                }
+
+                var texto = document.getElementById("laHora");
+                texto.innerHTML = horas + ":" + minutos + ":" + segundos + " - " + dia + "/" + mes + "/" + año;
+            }
+
+            window.onload = function () {
+                setInterval(crono, 1000);
+            }
+        </script>
+    </div>
+</body>
+
+</html>

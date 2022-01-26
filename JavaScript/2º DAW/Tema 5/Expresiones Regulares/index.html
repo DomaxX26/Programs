@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expresions Regulars</title>
+    <script src="index.js"></script>
+    <style>
+        body{
+			width: 400px;
+			font-family: serif;
+		}
+
+		label{
+			font-weight: bold;
+			font-size: 1em;
+			font-family: sans-serif;
+		}
+
+		label{
+			font-weight: normal;
+			font-size: 1em;
+			font-family: serif;
+		}
+
+		input{
+			display: block;
+		}
+
+		input{
+			margin: 0px 0 15px 0;
+		}
+		
+		
+
+    </style>
+</head>
+<body>
+    <form action="" method="POST"> 
+        <label for="dni">DNI: </label>
+        <input type="text"  name="dni" id="dni">
+        
+        <label for="tel">Teléfono: </label>
+        <input type="text" name="tel" id="tel">
+        
+        <label for="fecha">Fecha: </label>
+        <input type="text" name="fecha" id="fecha">
+        
+        <label for="matricula">Matrícula: </label>
+        <input type="text" name="matricula" id="matricula">
+    
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email">
+        
+        <label for="url">URL: </label>
+        <input type="text" name="url" id="url">
+
+        <input type="submit" id="enviar" value="Enviar">
+        <input type="reset" id="eliminar" value="Borrar">
+
+        <p id="missatgeError">
+
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Expression regular per a validar
+email: ^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$
+telefon separat ^\d{3}\s\d{3}\s\d{3}$
+nombre Apellido: ^[A-Z a-z]+$
+matricula   A1234BB, 1234BBB, B1234BBB
+^[A-Z]{1}\d{4}[A-Z]{2}$|^\d{4}[A-Z]{3}$|^[A-Z]{1}\d{4}[A-Z]{3}$
+nom de 2 a 20 ^[A-z]{2,20}$
+NIF/DNI ^[XYZ]?\d{5,8}[A-Z]$
+Nickname ^[A-z0-9]{3,16}$
+contraseña (?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$
+fecha YYYY/mm/dd new RegExp(/^\d{4}\/(0?[1-9]|1[012])\/(0?[1-9]|[12][0-9]|3[01])$/)
+matricula  9999 ZZZ new RegExp(/^\d{4} [A-Z]{3}$/)

@@ -1,0 +1,535 @@
+@font-face {
+    font-family: Source Code Pro;
+    src: url(../fonts/Source_Code_Pro/static/SourceCodePro-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(../fonts/ubuntu_[allfont.es].ttf);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvica Neue", Arial, Helvetica, sans-serif;
+}
+
+/*Header*/
+header{
+    background-color: #151617;
+    position: fixed;
+    z-index: 99999;
+}
+
+header a , header p{
+    color: white;
+}
+
+header .col-6 {
+    display: flex;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    align-items: center;
+}
+
+.menu {
+    font-size: 13px;
+    justify-content: space-around;
+}
+
+.menu a:hover{
+    color: orange;
+}
+
+header a {
+    font-weight: bold;
+    padding-top: 0.5%;
+    padding-right: 8.8%;
+    text-decoration: none;
+}
+
+header p {
+    padding-left: 1.8%;
+    margin-top: -1%;
+}
+
+header img {
+    margin-top: 0.3%;
+    margin-left: 0.2%;
+    width: 35px;
+}
+
+/*Main*/
+/*BANDA 1*/
+.banda1 {
+    background-image: radial-gradient(80vw circle at 50% 10%, #3a2099 17%, #480c59 100%);
+    color: white;
+}
+
+.banda1 h1, p {
+    text-align: center;
+}
+
+.banda1 h1 {
+    font-size: 60px;
+    margin-top: 5px;
+    margin-bottom: 37px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+}
+
+.finalBanda1{
+padding-bottom: 2.8%;
+}
+
+.titol p {
+    font-size: 26px;
+    padding: 0% 15%;
+    line-height: 35px;
+}
+
+.banda1 .titol {
+    background-image: url(../img/confeti.svg);
+    background-position: 15px 16px;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    padding-top: 140px;
+}
+
+.classe {
+    margin-bottom: 5%;
+}
+
+.targeta {
+    color: white;
+    border-radius: 10px;
+    width: 45vw;
+    padding-left: 3%;
+    margin-top: -2%;
+    padding-bottom: 6%;
+    opacity: 0.5;
+}
+
+.targeta:hover{
+    opacity: 1;
+}
+
+.plugin {
+    background-image: linear-gradient(153deg, #e64c4c 0%, #fb8332 95%);
+    margin-left: 5%;
+}
+
+.imgTar {
+    display: flex;
+    padding-top: 11%;
+    padding-left: 3.8%;
+}
+
+.icones img {
+    width: 48px;
+    height: 48px;
+}
+
+.assistencia {
+    background-image: linear-gradient(153deg, #da6bf8 0%, #815eff 95%);
+}
+
+.assistencia p{
+    margin-right: -3px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: normal;
+    margin-left: 2.5%;
+    margin-top: -0.4%;
+}
+
+.targeta h2{
+    letter-spacing: 1px;
+}
+.text {
+    margin-left: 12.5%;
+    margin-right: 5%;
+    line-height: 23.5px;
+    font-size: 16px;
+}
+
+.documentacio {
+    margin-top: 1.4%;
+    margin-left: 12.8%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.documentacio p{
+    margin-left:-3px;
+}
+
+.targeta p {
+    text-align: left;
+}
+
+.formats{
+    margin-top: -5%;
+}
+
+.formats img {
+    margin: auto;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.formats p {
+    margin-top:-5.5%;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.formats span{
+    background-color: rgba(31, 31, 31, 0.5);
+    padding: 0.5% 2%;
+    border-radius: 5px;
+    font-family: Source Code Pro;
+    font-size: 14px;
+}
+
+#fitxer {
+    padding-left: 4.6%;
+}
+
+#fitxer .fletxa{
+    margin-left: -2%;
+    margin-top: -3.5%;
+}
+
+#api {
+    padding-right: 4.6%;
+}
+
+#api .fletxa{
+    margin-left: -0.5%;
+    margin-top: -3.5%;
+}
+
+.fletxa{
+    display: flex;
+    font-size: 22px;
+    margin-top: -3%;
+    justify-content: center;
+}
+
+.fletxa h3{
+    margin-top: 5px;
+    margin-left: 11px;
+    font-weight: normal;
+}
+
+.formatCentre{
+    margin-bottom: 4px;
+}
+
+.formatCentre h3{
+    margin-left:0px;
+    margin-bottom: 0px; 
+}
+
+.formatDreta h3{
+    margin-left: 3px;
+    margin-bottom: 3px;
+    margin-right: 1px;
+}
+
+.fletxa img{
+    width: 18px;
+    height: 18px;
+    margin-top: 4.5%;
+    margin-left: 2.5%;
+    margin-right: 0;
+}
+
+.opacitat:hover{
+    opacity: 0.5;
+}
+
+/*BANDA 2*/
+.banda2{
+    background-color: white;
+}
+
+.banda2 h2{
+    margin-top: 97px;
+    margin-left: 2px;
+    font-size: 42px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.banda2 h3{
+    font-weight: normal;
+    margin-left: 220px;
+    margin-top:18px;
+    letter-spacing: 0.5px;
+    font-size: 25px;
+}
+
+.maquetem p {
+    text-align: left;
+    margin-top:18px;
+    margin-left: 220px;
+    margin-right: 220px;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.maquetarWeb p::first-line{
+    word-spacing: 1.5px;
+}
+
+.cursiva{
+    font-style: italic;
+}
+
+ol{
+    margin-top: -25px;
+    margin-left: 220px;
+}
+
+ol img{
+    margin-top: 14px;
+    margin-bottom: 8px;
+}
+
+li{
+    margin-bottom: 8px;
+}
+
+.negre{
+    font-family: Source Code Pro;
+    background-color: rgba(127, 127, 127, 0.7);
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.codic{
+    background-color: #f6f7f8;
+    border: 1px solid rgba(175, 175, 175, 0.2);
+    border-radius: 5px;
+    margin-top:9px;
+    margin-left:234px;
+    margin-right: 234px;
+    padding-bottom: 25px;
+    letter-spacing: 0.4px;
+}
+.codic p{
+    font-family: Source Code Pro;
+    text-align: left;
+    font-size: 15px;
+}
+
+#primer{
+    margin-top:6px;
+    margin-left:4px;
+}
+
+.groc{
+    color: #c59000;
+}
+
+.roig{
+    color: #e64c4c;
+}
+
+.tab1{
+    text-indent: 35px;
+}
+
+.tab2{
+    text-indent: 70px;
+}
+
+#titolh3{
+    margin-top:58px;
+}
+
+.publicar p::first-line{
+    word-spacing: 4px;
+}
+
+.publicar p{
+    word-spacing: 2.2px;
+}
+
+.taronja{
+    color:orange;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.taronja:hover{
+    opacity: 0.5;
+}
+
+.millorar{
+    margin: 34px 235px 80px 235px;
+    border: 1px solid rgba(175, 175, 175, 0.2);
+}
+.millorar p{
+    font-size: 12px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+/*BANDA 3*/
+
+.banda3{
+    background-color: black;
+    color: white;
+    padding-bottom: 83px;
+}
+
+.banda3 h2{
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.banda3 p{
+    margin-top: 6px;
+    margin-left: 182px;
+    margin-right: 182px;
+    letter-spacing: 0.5px;
+    line-height: 32px;
+    font-size: 25px;
+    text-align:center;
+}
+
+/*BANDA 4*/
+.banda4 h2{
+    text-align: center;
+    margin-top: 8.5%;
+    margin-left: -0.1%;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+
+.icona{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.icona img{
+    margin-top:-12px;
+}
+
+.left img{
+    margin-left: 10px;
+}
+
+.center img{
+    margin-right: 30px;
+}
+
+.right img{
+    margin-right: 70px;
+}
+
+.banda4 .formatCentre h3{
+    margin-left: -30px;
+} 
+
+.banda4 .formatDreta h3{
+    margin-left: -70px;
+}
+
+.banda4 p{
+    margin-top:-14px;
+    margin-left: 10px;
+    line-height: 24px;
+}
+
+.banda4 .textCentre p{
+    margin-top:-17px;
+    margin-left: -30px;
+}
+
+.banda4 .textDreta p{
+    margin-top:-18px;
+    margin-left: -70px;
+}
+
+/*Footer*/
+
+footer p{
+    color: rgb(121, 121, 121);
+    text-align: left;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+footer .col-4 {
+    display: flex;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer a{
+
+    padding-top: 0.5%;
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+    margin-top: 24px;
+    letter-spacing: 0.5px;
+}
+
+footer #git{
+margin-left: -91px;
+}
+
+footer #face{
+margin-left: -20px;
+}
+
+footer #tw{
+    margin-left:-20px;
+}
+
+/*Cookies*/
+#cookies{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 40px;
+    z-index: 99999;
+    right: 0px;
+    bottom: 80px;
+    margin:0% 31%;
+    padding: 15px 40px;
+    font-size: 13px;
+}
+
+#cookies p{
+    text-align: left;
+}
+
+#cookies img{
+    width: 15px;
+    opacity: 0.5;
+}
+
+#cookies img:hover{
+    opacity: 1;
+}

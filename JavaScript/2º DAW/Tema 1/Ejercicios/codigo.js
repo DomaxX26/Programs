@@ -1,0 +1,1 @@
+alert("Este es el codigo del enlace externo")

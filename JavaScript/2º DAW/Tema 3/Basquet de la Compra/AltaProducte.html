@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alta producte</title>
+    <script src="AltaProducte.js"></script>
+    <script src="Aplicacion.js"></script>
+</head>
+<body>
+    <h1>Alta de un nou producte</h1>
+<form id="formulario">
+    <div>
+        <label for="descripcion">Descripció: </label>
+        <input type="text" id="descripcion">
+    </div>
+
+    <div>
+        <label for="precio">Preu: </label>
+        <input type="number" min="0" id="precio">
+    </div>
+
+    <div>
+        <label for="cantidad">Quantitat: </label>
+        <input type="number" min="0" id="cantidad">
+    </div>
+</form>
+    <button type="button" id="guardar">Gravar</button>
+    <a href="/Tenda.html"><button type="button" id="enviar">Enviar Productos</button></a>
+    
+</body>
+</html>

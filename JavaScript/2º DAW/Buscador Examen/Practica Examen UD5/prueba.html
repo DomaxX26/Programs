@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            * {
+                margin: 0; padding: 0;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgba(235, 211, 165, 0.185);
+            }
+
+            
+
+            .card {
+                display: flex;
+                border: solid black;
+                margin-top: 2%;
+                width: 40em;
+                height: 9em;
+                background-color: white;
+            }
+
+            img {
+                width: 10em;
+                height: 100%;
+            }
+
+            .card-body {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .card-precio {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                box-sizing: border-box;
+                justify-content: space-between;
+                padding: 15px 15px 0px 15px;
+            }
+
+            .card-precio p {
+                font-size: 13px;
+            }
+
+            .card-precio span {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .contado {
+                color: rgba(255, 0, 0, 0.678);
+            }
+
+            .card-garantia {
+                border-left: solid grey 1px;
+                padding-left: 50px;
+            }
+
+            .card-garantia p {
+                font-size: 13px;
+                color: rgb(21, 148, 42);
+            }
+            
+            .card-titulo {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                font-size: 15px;
+                box-sizing: border-box;
+                padding: 0px 15px 15px 15px;
+            }
+
+            .card-etiquetas {
+                padding: 0px 15px 15px 10px;
+                font-size: 12px;
+                color: grey;
+            }
+
+            #ubicacion, #combustible, #color {
+                padding-right: 10px;
+                padding-left: 10px;
+                border-right: solid grey 1px;
+            }
+
+            #ano {
+                padding-left: 10px;
+            }
+
+            input {
+                margin-top: 20px;
+                font-size: 30px;
+            }
+
+            .filtros {
+                margin-bottom: 10px;
+            }
+
+            .filtros label {
+                margin-top: 20px;
+            }
+        </style>
+
+</head>
+    <body>
+        <input type="text" id="buscar">
+        <br>
+        <div class="filtros">    
+            <label>Ubicacion:</label>
+            <select id="ubicacion">
+                <option selected>Selecciona una opcion</option>
+                <option value="Cadiz">Cadiz</option>
+                <option value="Malaga">Malaga</option>
+                <option value="Alicante">Alicante</option>
+                <option value="Andorra">Andorra</option>
+            </select>
+
+            <label>Combustible:</label>
+            <select id="combustible">
+                <option selected>Selecciona una opcion</option>
+                <option value="Gasolina">Gasolina</option>
+                <option value="Gasoi">Gasoi</option>
+            </select>
+
+            <label>Color:</label>
+            <select id="color">
+                <option selected>Selecciona una opcion</option>
+                <option value="Rojo">Rojo</option>
+                <option value="Verde">Verde</option>
+                <option value="Azul">Azul</option>
+            </select>
+        </div>
+        <div id="cards"></div>
+    </body>
+    <script type="text/javascript" src="coches.js"></script>
+    <script type="text/javascript" src="logic.js"></script>
+</html>

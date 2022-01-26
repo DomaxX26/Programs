@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+*{
+    font-family: 'Lato', 'san-serif';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.container{
+    max-width: 900px;
+    margin: 60px auto;
+}
+.container h1,
+.container p{
+    color:#fff;
+    text-align:center;
+    padding:20px 0;    
+}
+
+.container h1{
+    font-size: 4em;
+}
+
+.container p{
+    font-size: 2em;
+}
+.center-abs{
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.charts{
+    display: flex;
+}
+.chart {
+    position: relative;
+    width: 25%;
+    height: 260px;
+}
+
+.chart h3 {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 10px #000;
+}
+.chart svg {
+    z-index: 2;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 1;
+    border: 10px #baeaff solid;
+}
+
+span.text {
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+    font-size: 4em;
+    font-weight: 700;
+    color: #0096da;
+}
+
+.outer {
+    fill: transparent;
+    stroke: #0096da;
+    stroke-width: 10;
+    stroke-dasharray: 439; /* set in js file */
+    transform: rotate(270deg) translate(-150px, 0);
+}

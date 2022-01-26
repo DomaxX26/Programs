@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validación alta usuario</title>
+    <script src="index.js"></script>
+    <style>
+        .error {
+            border: solid 2px #FF0000;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="POST" name="formulario" id="myForm">
+        <fieldset>
+            <legend>Validación alta usuario</legend>
+
+            <p>
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" pattern="^[A-Za-z]{2,20}$"  minlength="2" maxlength="20" required>
+            </p>
+            <p>
+                <label for="apellidos">Apellidos: </label>
+                <input type="text" id="apellidos" name="apellidos" pattern="^[A-Za-z ]{2,30}$" minlength="2" maxlength="30" required>
+            </p>
+            <p>
+                <label for="nif">NIF/NIE: </label>
+                <input type="text" id="nif" name="nif" pattern="^\d{8}[A-Z]{1}$" required>
+            </p>
+            <p>
+                <label for="email">Correo Electrónico: </label>
+                <input type="text" id="email" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            </p>
+            <p>
+                <label for="email2">Repetir Correo Electrónico:</label>
+                <input type="text" id="email2" name="email2" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            </p>
+            <p>
+                <label for="nickname">Nickname: </label>
+                <input type="text" id="nickname" name="nickname" minlength="2" maxlength="8" pattern="^[A-Za-z]{2,8}$" required>
+            </p>
+            <p>
+                <label for="contra">Contraseña: </label>
+                <input type="password" id="contra" name="contra" pattern="(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" required>
+            </p>
+            <p>
+                <label for="contra2">Repetir Contraseña: </label>
+                <input type="password" id="contra2" name="contra2" pattern="(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" required>
+            </p>
+            <p>
+                <label for="nombre">Capcha: </label>
+                <input type="text" id="captcha" name="captcha" pattern="^(-\d{0,2}||\d{0,2})$" required>
+            </p>
+        </fieldset>
+        <p id="missatgeError"></p>
+        <input type="submit" id="enviar" value="Enviar">
+        <input type="reset" id="borrar" value="Borrar">
+    </form>
+</body>
+
+</html>
