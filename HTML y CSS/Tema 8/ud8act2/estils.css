@@ -1,0 +1,32 @@
+@font-face {
+    font-family: DMSans;
+    src: url('DMSans-Medium.ttf');
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-image: url("img/background3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container{
+    border: solid 1px white;
+    background-color: white;
+    border-radius: 5px;
+    width: 75%
+}
+
+h1, .redes{
+    font-family: DMSans;
+}
+
+#twitter{
+    color: white;
+}
