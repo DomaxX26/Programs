@@ -20,29 +20,30 @@
 </head>
 
 <body>
-    <div class="container g-0">
-        <div class="row g-0 ">
-            <div class="col-7">
-                <img src="img/lateral2.jpg" class="img-fluid rounded-start">
+    <div class="container-fluid vh-100">
+    <div class="container g-0  position-absolute top-50 start-50 translate-middle" style="width:60%; height:75%;">
+        <div class="row g-0">
+            <div class="col-lg-7 imgLateral">
+                
             </div>
-            <div class="col-5">
+            <div class="col-lg-5">
                 <h1 class="mt-5 text-center">Benvingut</h1>
-                <form class="needs-validation ms-5 me-5" novalidate>
-                    <div class="mb-3">
+                <form class="needs-validation ms-5 me-5 text-center" novalidate>
+                    <div class="mb-3 text-start">
                         <label for="login" class="form-label">Login</label>
                         <input type="text" class="form-control" id="login" aria-describedby="loginAyuda" required>
                         <div class="invalid-feedback">
                             Has d'introduir el Login.
                         </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 text-start">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" required>
                         <div class="invalid-feedback">
                             Has d'introduir el Password.
                         </div>
                     </div>
-                    <div class="float-right">
+                    <div class="d-flex justify-content-end">
                         <button type="submit" class="btn btn-success rounded-pill redes pe-4"><i class="far fa-user pe-2 ps-3"></i>Entrar</button>
                     </div>
                     <hr>
@@ -56,6 +57,7 @@
 
             </div>
         </div>
+    </div>
     </div>
 </body>
 

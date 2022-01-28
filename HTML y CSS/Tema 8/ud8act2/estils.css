@@ -5,7 +5,6 @@
 
 *{
     box-sizing: border-box;
-    margin:0;
     padding: 0;
 }
 
@@ -15,12 +14,15 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-
+.imgLateral{
+    background-image: url("img/lateral2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .container{
     border: solid 1px white;
     background-color: white;
     border-radius: 5px;
-    width: 75%
 }
 
 h1, .redes{

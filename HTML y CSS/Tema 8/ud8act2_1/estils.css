@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "DMSans";
+    src: url("fonts/DMSans-Medium.ttf");
+}
+
+body {
+    background-image: url(img/background3-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: DMSans;
+}
+
+.img-lateral {
+    background-image: url(img/lateral2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    width: 60%;
+}
+
+a {
+    font-size: 80%;
+}
+
+.entrar:hover {
+    opacity: 0.5;
+    color: black;
+}
+
+.botones button{
+    border-radius: 20px;
+}
