@@ -1,0 +1,73 @@
+@font-face{
+    font-family: "HindVadodaraMedium";
+    src: url("fonts/Hind_Vadodara/HindVadodara-Medium.ttf");
+}
+
+@font-face{
+    font-family: "HindVadodaraBold";
+    src: url("fonts/Hind_Vadodara/HindVadodara-Bold.ttf");
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: HindVadodaraMedium;
+}
+
+.llista{
+    background-color: #ffffff;
+}
+
+body{
+    background-color: #e8f1f9;
+}
+
+.targeta{
+    border: 0px;
+}
+
+.imgCard{
+    width: 56%;
+}
+
+.nombre{
+    font-family: "HindVadodaraBold";
+}
+
+.bodyTargeta{
+    padding: 0%;
+}
+
+.bodyTargeta p{
+    font-size: 13px;
+}
+
+.liLista{
+    background-color: #23282d;
+    color: white;
+}
+
+.liLista:hover{
+    font-style: italic;
+    background-color: #e8eaed;
+    color: black;
+    opacity: 0.5;
+}
+
+.tituloCentro h3{
+    opacity: 0.5;
+    font-size: 25px;
+}
+
+.barraNavegacio{
+    background-color: white;
+}
+
+.roig{
+    color: red;
+}
+
+.icon{
+    font-size: 20px;
+}
