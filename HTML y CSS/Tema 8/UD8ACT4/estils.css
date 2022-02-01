@@ -8,6 +8,11 @@
     src: url("fonts/Hind_Vadodara/HindVadodara-Bold.ttf");
 }
 
+@font-face{
+    font-family: "HindVadodaraRegular";
+    src: url("fonts/Hind_Vadodara/HindVadodara-Regular.ttf");
+}
+
 *{
     box-sizing: border-box;
     padding: 0%;
@@ -70,4 +75,13 @@ body{
 
 .icon{
     font-size: 20px;
+}
+
+.badge99{
+    font-size: .55em;
+}
+
+.tituloTargetas{
+    background-color: #f7f7f7;
+    font-family: HindVadodaraRegular;
 }
