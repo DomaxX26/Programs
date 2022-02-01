@@ -13,6 +13,8 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="estils.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="grafica.js"></script>
     <title>UDACT4</title>
 </head>
 
@@ -112,7 +114,7 @@
                                     Atacs per continent
                                 </div>
                                 <div class="card-body">
-
+                                        <canvas id="pie-chart" width="500" height="700"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -162,8 +164,61 @@
                                     <i class="bi bi-clipboard-data"></i>
                                     Tràfic
                                 </div>
-                                <div class="card-body fs-3 text-center">
-
+                                <div class="card-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Nº</th>
+                                                <th scope="col">Pais</th>
+                                                <th scope="col">Usuaris</th>
+                                                <th scope="col">Connexions</th>
+                                                <th scope="col">%Intents</th>
+                                                <th scope="col">Mitjana atac (seg)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>155257</td>
+                                                <td>Xina</td>
+                                                <td>2525</td>
+                                                <td>1560</td>
+                                                <td>2500</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>115776</td>
+                                                <td>USA</td>
+                                                <td>6634</td>
+                                                <td>7887</td>
+                                                <td>3453</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>114889</td>
+                                                <td>Rúsia</td>
+                                                <td>8768</td>
+                                                <td>3288</td>
+                                                <td>934</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>112187</td>
+                                                <td>Indonesia</td>
+                                                <td>45533</td>
+                                                <td>67887</td>
+                                                <td>2234</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>99023</td>
+                                                <td>India</td>
+                                                <td>667675</td>
+                                                <td>3414</td>
+                                                <td>654</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
