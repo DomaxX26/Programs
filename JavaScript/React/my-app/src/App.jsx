@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React from "react";
 
+
+
 class App extends React.Component{
   /*arrowhandleClick = (e) => {
     e.preventDefault ();
@@ -28,6 +30,7 @@ class App extends React.Component{
   }*/
 
   render(){
+    console.log(this.props.tech);
     let h1class = {
       textAlign: 'center',
       color: 'red',
