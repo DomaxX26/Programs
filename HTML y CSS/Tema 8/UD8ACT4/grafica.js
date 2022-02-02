@@ -23,6 +23,10 @@ function main(){
             }
         }
     });
+
+    document.getElementById('escarabajo').addEventListener('click', function (event) {
+        document.getElementById("myModal").style = "display : block;"
+    })
     
 }
 
