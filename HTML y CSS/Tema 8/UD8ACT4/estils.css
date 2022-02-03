@@ -53,7 +53,7 @@ body{
     color: white;
 }
 
-.liLista:hover{
+.liLista:hover, .estadistica{
     font-style: italic;
     background-color: #e8eaed;
     color: black;
@@ -92,4 +92,8 @@ body{
 
 .footerText{
     font-size: 14px;
+}
+
+#myModal{
+    width: 20%;
 }
