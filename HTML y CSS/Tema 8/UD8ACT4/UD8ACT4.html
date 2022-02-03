@@ -27,8 +27,8 @@
                         <img class="rounded-pill card-img-top imgCard" src="img/persona1.png" alt="Foto perfil">
                     </div>
                     <div class="card-body bodyTargeta">
-                        <h5 class="card-title nombre">Rosa Risa</h5>
-                        <p class="card-text">SecOp Nivell2</p>
+                        <h5 class="card-title nombre d-none d-sm-block">Rosa Risa</h5>
+                        <p class="card-text d-none d-sm-block">SecOp Nivell2</p>
                     </div>
                 </div>
                 <ul class="list-group mx-2 mt-3 rounded-0">
@@ -55,26 +55,26 @@
                     <li class="liLista list-group-item d-flex justify-content-xl-start justify-content-center align-items-center py-3">
                         <i class="bi bi-envelope-exclamation me-1"></i>
                         <span class="d-none d-lg-block">Missatges</span>
-                        <span class="badge bg-primary rounded-pill ms-1">14</span>
+                        <span class="badge bg-primary rounded-pill ms-1 d-none d-md-block">14</span>
                     </li>
                 </ul>
             </div>
             <div class="col-10 g-0">
                 <div class="container-fluid">
-                    <div class="row ms-0 py-4 barraNavegacio border rounded-0">
-                        <div class="col-8 tituloCentro ps-4">
+                    <div class="row ms-0 py-4 g-md-0 barraNavegacio border rounded-0">
+                        <div class="col-md-8 tituloCentro ps-lg-4 d-none d-sm-block">
                             <h3>Centre de control de seguretat activa</h3>
                         </div>
-                        <div class="col-4">
-                            <ul class="nav justify-content-end">
+                        <div class="col-md-4 col-12">
+                            <ul class="nav justify-content-center justify-content-lg-end">
                                 <li class="nav-item border-end">
-                                    <a class="nav-link roig" href="#">
+                                    <a class="nav-link roig px-md-0" href="#">
                                         <i class="bi bi-clock"></i>
                                         10:52:25 +1 GMT
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link icon" href="#">
+                                    <a class="nav-link icon px-md-1" href="#">
                                         <i id="escarabajo" class="bi bi-bug-fill position-relative">
                                             <span
                                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ms-2 badge99">99+</span>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="container g-5 my-4">
                     <div class="row g-2">
-                        <div class="col-4">
+                        <div class="col-md-4 col-12">
                             <div class="card">
                                 <div class="card-title border-bottom py-2 ps-3 fs-3 tituloTargetas">
                                     <i class="bi bi-shield-exclamation"></i>
@@ -139,7 +139,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-12">
                             <div class="card">
                                 <div class="card-title border-bottom py-2 ps-3 fs-3 tituloTargetas mb-0">
                                     <i class="bi bi-compass"></i>
@@ -150,7 +150,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-12">
                             <div class="card">
                                 <div class="card-title border-bottom py-2 ps-3 fs-3 tituloTargetas">
                                     <i class="bi bi-speedometer2"></i>
@@ -163,7 +163,6 @@
                                             aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
                                         <div class="progress-bar bg-info" role="progressbar" style="width: 30%;"
                                             aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
-
                                     </div>
                                     <div class="progress rounded-0 mb-2" style="height: 25px;">
                                         <span class="pe-3 bg-white">ftp</span>
@@ -205,9 +204,9 @@
                                                 <th scope="col">Nº</th>
                                                 <th scope="col">Pais</th>
                                                 <th scope="col">Usuaris</th>
-                                                <th scope="col">Connexions</th>
-                                                <th scope="col">%Intents</th>
-                                                <th scope="col">Mitjana atac (seg)</th>
+                                                <th scope="col"><span class="d-none d-sm-block">Connexions</span></th>
+                                                <th scope="col"><span class="d-none d-sm-block">%Intents</span></th>
+                                                <th scope="col"><span class="d-none d-sm-block">Mitjana atac (seg)</span></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -215,41 +214,41 @@
                                                 <th scope="row">1</th>
                                                 <td>155257</td>
                                                 <td>Xina</td>
-                                                <td>2525</td>
-                                                <td>1560</td>
-                                                <td>2500</td>
+                                                <td><span class="d-none d-sm-block">2525</span></td>
+                                                <td><span class="d-none d-sm-block">1560</span></td>
+                                                <td><span class="d-none d-sm-block">2500</span></td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">2</th>
                                                 <td>115776</td>
                                                 <td>USA</td>
-                                                <td>6634</td>
-                                                <td>7887</td>
-                                                <td>3453</td>
+                                                <td><span class="d-none d-sm-block">6634</span></td>
+                                                <td><span class="d-none d-sm-block">7887</span></td>
+                                                <td><span class="d-none d-sm-block">3453</span></td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">3</th>
                                                 <td>114889</td>
                                                 <td>Rúsia</td>
-                                                <td>8768</td>
-                                                <td>3288</td>
-                                                <td>934</td>
+                                                <td><span class="d-none d-sm-block">8768</span></td>
+                                                <td><span class="d-none d-sm-block">3288</span></td>
+                                                <td><span class="d-none d-sm-block">934</span></td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">4</th>
                                                 <td>112187</td>
                                                 <td>Indonesia</td>
-                                                <td>45533</td>
-                                                <td>67887</td>
-                                                <td>2234</td>
+                                                <td><span class="d-none d-sm-block">45533</span></td>
+                                                <td><span class="d-none d-sm-block">67887</span></td>
+                                                <td><span class="d-none d-sm-block">2234</span></td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">5</th>
                                                 <td>99023</td>
                                                 <td>India</td>
-                                                <td>667675</td>
-                                                <td>3414</td>
-                                                <td>654</td>
+                                                <td><span class="d-none d-sm-block">667675</span></td>
+                                                <td><span class="d-none d-sm-block">3414</span></td>
+                                                <td><span class="d-none d-sm-block">654</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -258,7 +257,7 @@
                                     <div class="container-fluid">
                                         <div class="row align-items-center">
                                             <div class="col-3">
-                                                <span class="text-muted mb-0">Mostrant 1 de 8</span>
+                                                <span class="text-muted mb-0 d-none d-md-block">Mostrant 1 de 8</span>
                                             </div>
                                             <div class="col-9">
                                                 <nav>
@@ -284,9 +283,9 @@
                     </div>
                 </div>
                 <div class="container-fluid">
-                    <div class="row ms-0 py-2 border rounded-0 text-center tituloTargetas">
-                        <div class="col-12 ps-4">
-                            <div class=" d-flex justify-content-center fst-italic footerText">
+                    <div class="row ms-0 py-2 border rounded-0 tituloTargetas">
+                        <div class="col-12">
+                            <div class="text-center fst-italic footerText">
                                 <p class="my-2">@202x Disseny interfícies Web</p>
                             </div>
                         </div>
