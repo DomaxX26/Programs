@@ -30,6 +30,9 @@ class App extends React.Component{
   }*/
 
   render(){
+    const title = this.props.title;
+    const tech = this.props.tech;
+
     console.log(this.props.tech);
     let h1class = {
       textAlign: 'center',
@@ -43,14 +46,18 @@ class App extends React.Component{
 
     return(
       <div>
-        <h1 style={h1class}>Styled Component</h1>
-        <h2 style={h2Class}>Other Style</h2>
+        <h1 style={h1class}>{title}</h1>
+        <h2 style={h2Class}>{tech[0]}</h2>
       </div>
     )
 
   }
 }
 
+App.protoTypes = {
+  title: this.propTypes.string.isRequired,
+  version: this.propTypes.number.isRequired
+}
 
 /*function App() {
   return (
