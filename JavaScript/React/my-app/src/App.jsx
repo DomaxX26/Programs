@@ -1,63 +1,71 @@
+import React, {Component} from 'react';
+import propTypes from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
-import React from "react";
 
 
 
 class App extends React.Component{
-  /*arrowhandleClick = (e) => {
-    e.preventDefault ();
-    alert('The firts link was clicked.');
-    console.log("First Click"); 
+
+  constructor(props){
+    super(props);
+    this.state={
+      title:'Default',
+      time: new Date ().toLocaleDateString(),
+      number:0,
+      numbers:[]
+    }
   }
 
-  handClick (e){
-    e.preventDefault();
-    alert('The second link was clicked');
-    console.log("Second Click")
+  changeState(){
+    let number = Math.round(Math.random()*4);
+    let numbers = this.state.numbers;
+    numbers.push(number);
+
+    this.setState({
+      time: new Date().toLocaleTimeString(),
+      numbers:numbers,
+      number: number,
+      title:((number % 2 === 0) ? 'It is even' : 'It is odd')
+    })
+    console.log('changestate--> ', this.state)
   }
 
   render(){
-    return(
-      <div className="App">
-        <button className="btn btn-danger mt-2" onClick={() => alert("Its works")}>
-          Click on this button
-        </button>
-        <a href="#" className="link-light me-2 border border-waring p-2 mt-2 ms-2 bg-warning rounded" onClick={this.arrowhandleClick}>Click first link</a>
-        <a href="#" className="link-light me-2 border border-danger p-2 mt-2 ms-2 bg-danger rounded" onClick={(e) => this.handClick(e)}>Click second link</a>
-      </div>
-    );
-  }*/
-
-  render(){
-    const title = this.props.title;
-    const tech = this.props.tech;
-
-    console.log(this.props.tech);
-    let h1class = {
-      textAlign: 'center',
-      color: 'red',
-      fontWeight: 'bold'
-    }
-
-    let h2Class = {
-      color:'darkred'
-    }
+    console.log('Render was called--> ', this.state);
+    const colors = ['red', 'yellow', 'green','blue', 'orange'];
+    const color = colors[this.state.number];
 
     return(
-      <div>
-        <h1 style={h1class}>{title}</h1>
-        <h2 style={h2Class}>{tech[0]}</h2>
+      <div className="App" style={{backgroundColor: color}}>
+        <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo"/>
+        <h1 className="App-title">
+        {this.state.title} - {this.state.number}
+        </h1>
+        </header>
+        <div className="App-intro">
+          <div>{this.state.time}</div>
+          Press this button to change state
+        </div>
+        <div>
+          <button onClick={() => this.changeState()}>Change state</button>
+        </div>
+        <div>
+          Generared numbers
+          <ul>
+            {this.state.numbers.map((x)=>(
+              <li key={x}>{x}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     )
 
   }
 }
 
-App.protoTypes = {
-  title: this.propTypes.string.isRequired,
-  version: this.propTypes.number.isRequired
-}
+
 
 /*function App() {
   return (
