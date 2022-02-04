@@ -1,0 +1,19 @@
+.menuBar{
+    background-color: #ffc107;
+}
+
+.menuBar span{
+    font-size: 20px
+}
+
+.imgTam{
+    width: 5%
+}
+
+.barraIzq{
+    background-color: #e5e6e8;
+}
+
+.colorBoton{
+    background-color: #cce5ff;
+}
