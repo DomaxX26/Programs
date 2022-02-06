@@ -17,3 +17,11 @@
 .colorBoton{
     background-color: #cce5ff;
 }
+
+.carrito:checked{
+    border-color: blue;
+}
+
+.tamanyoBadge{
+    font-size: 10px !important;
+}
