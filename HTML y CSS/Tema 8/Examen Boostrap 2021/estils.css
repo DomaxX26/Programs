@@ -1,0 +1,45 @@
+@font-face{
+    font-family: "Karla";
+    src: url(/recursos/fonts/Karla/static/Karla-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Karla;
+}
+
+menuPosition{
+    position: fixed;
+    z-index: 999;
+}
+.imgLogo{
+    width: 6%;
+}
+
+.buscador{
+    width: 45%
+}
+
+.textoTargeta{
+    text-align: justify;
+}
+
+.opcionCerca{
+    font-size: 18px;
+}
+
+.hoverCard:hover{
+    background-color: rgba(110, 110, 110, 0.5);
+}
+
+.imgChat{
+    width: 8%;
+}
+
+.buttonChat{
+    position: fixed;
+    top: 90%;
+    left:85%;
+}
