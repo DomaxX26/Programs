@@ -2,6 +2,11 @@ import React from 'react';
 import { Container, Row, Col, FloatingLabel, Form, Button } from 'react-bootstrap';
 
 const Header = () => {
+
+    const afegirTasca = () =>{
+        console.log("Hola");
+    }
+    
     return (
         <header className='App-header'>
         <Container>
@@ -18,7 +23,7 @@ const Header = () => {
                         </FloatingLabel>
                     </Col>
                     <Col>
-                        <Button variant="primary" className="mt-2 d-flex justify-content-start">Afegir Tasca</Button>
+                        <Button variant="primary" className="mt-2 d-flex justify-content-start" onClick={afegirTasca}>Afegir Tasca</Button>
                     </Col>
                 </Row>
             </Container>
