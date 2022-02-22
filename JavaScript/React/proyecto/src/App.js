@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import Register from './Components/Register';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
+import Error404 from './Components/Error404';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/Register" element={<Register/>}/>
+          <Route path="/Error404" element={<Error404/>}/>
+          <Route path="*" element={<Error404/>}/>
         </Routes>
       <Footer/>
     </div>
