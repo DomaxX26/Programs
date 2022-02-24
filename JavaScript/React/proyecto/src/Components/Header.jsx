@@ -25,7 +25,7 @@ export const Header = () => {
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li><a className="dropdown-item" href="#">Area Personal</a></li>
                                     <li><a className="dropdown-item" href="/Register">Registrarse</a></li>
-                                    <li><a className="dropdown-item" href="#">Login</a></li>
+                                    <li><a className="dropdown-item" href="/Login">Login</a></li>
                                     <li><a className="dropdown-item" href="#">Logout</a></li>
                                 </ul>
                             </li>
