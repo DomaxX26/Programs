@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Form, Row, Col } from 'react-bootstrap';
 import { useFormik } from "formik";
-import * as Yup from 'yup';
+import * as yup from 'yup';
 
 
 
-const RegisterSchema = Yup.object().shape({
-    name: Yup.string().min(6, 'Muy Corto!').max(255, 'Muy largo!').required('Campo Obligatorio'),
-    email: Yup.string().email('Email Invalido').required('Campo Obligatorio'),
-    password: Yup.string().min(6, 'Muy Corto!').max(20, 'Muy largo!').required('Campo Obligatorio'),
-    passwordc: Yup.string()
+const register = yup.object().shape({
+    name: yup.string().min(6, 'Muy Corto!').max(255, 'Muy largo!').required('Campo Obligatorio'),
+    email: yup.string().email('Email Invalido').required('Campo Obligatorio'),
+    password: yup.string().min(6, 'Muy Corto!').max(20, 'Muy largo!').required('Campo Obligatorio'),
+    passwordc: yup.string()
         .min(6, 'Muy Corto!')
         .max(20, 'Muy largo!')
-        .oneOf([Yup.ref('password'), null], "No Coincides las Contraseñas!")
+        .oneOf([yup.ref('password'), null], "No Coincides las Contraseñas!")
         .required('Campo Obligatorio'),
 
 });
@@ -22,8 +22,8 @@ const RegisterSchema = Yup.object().shape({
 
 function Register() {
 
-    const [error, setError] = useState("");
     const navigate = useNavigate();
+    const [error, setError] = useState("");
 
     const formik = useFormik({
         initialValues: { name: '', 
@@ -37,6 +37,8 @@ function Register() {
                 'email': values.email,
                 'password': values.password
             };
+
+            localStorage.setItem("usuario", dates.name);
             console.error(dates);
             fetch("https://api.tendaciclista.ccpegoilesvalls.es/api/register", {
                 method: 'POST',
@@ -45,26 +47,23 @@ function Register() {
                     'Accept': 'application/json, text/plain, */*',
                     'Content-Type': 'application/json'
                 },
-                mode: 'cors'
             }).then(response => response.json())
                 .then(data => {
 
                     if (data.error != null) {
-                        console.log(data.error);
                         setError(data.error);
                     } else {
                         console.error("succes", data);
                         navigate('/Login');
                     }
                 })
-                .catch((errorajax) => {
-                    console.error('Error:', errorajax);
-                    setError(errorajax);
+                .catch((error) => {
+                    setError(error);
                 });
 
 
         },
-        validationSchema: RegisterSchema,
+        validationSchema: register,
     });
 
     return (

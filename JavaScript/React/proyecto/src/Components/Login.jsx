@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { Button, Form, Container } from 'react-bootstrap';
-import { useFormik } from "formik";
-import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
+import { useFormik } from "formik";
+import * as yup from 'yup';
 
 
-const SignupSchema = Yup.object().shape({
-  email: Yup.string().email('Email Invalido').required('Campo Obligatorio'),
-  password: Yup.string().min(6, 'Muy Corto!').max(20, 'Muy Largo!').required('Campo Obligatorio'),
+const Signup = yup.object().shape({
+  email: yup.string().email('Email Invalido').required('Campo Obligatorio'),
+  password: yup.string().min(6, 'Muy Corto!').max(20, 'Muy Largo!').required('Campo Obligatorio'),
 });
 
 
 function Login() {
-  const [error, setError] = useState("");
   const navigate = useNavigate();
+  const [error, setError] = useState("");
 
 
 
@@ -28,25 +28,21 @@ function Login() {
           'Accept': 'application/json, text/plain, */*',
           'Content-Type': 'application/json'
         },
-        mode: 'cors',
       }).then(response => response.json())
         .then(data => {
           if (data.error != null) {
-            console.log(data.error);
             setError(data.error);
-          } else {
-            console.error("succes", data.data.token); 
+          } else { 
             localStorage.setItem("tk", JSON.stringify(data.data.token));
-            navigate('/');
+            navigate('/AreaPersonal');
           }
         })
         .catch((error) => {
-          console.error('Error:', error);
           setError(error)
 
         });
     },
-    validationSchema: SignupSchema,
+    validationSchema: Signup,
   });
 
   return (
@@ -83,9 +79,8 @@ function Login() {
             <div className="text-danger d-flex justify-content-start">{formik.errors.password}</div>) : null}
         </Form.Group>
         <Form.Group className="mb-3" >
-          <Button variant="primary" type="submit"> Enviar </Button>
+          <Button variant="primary" type="submit">Enviar</Button>
         </Form.Group>
-
       </Form>
       </Container>
 

@@ -15,7 +15,7 @@ export const Header = () => {
                                 <a className="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Productos</a>
+                                <a className="nav-link" href="/Productos">Productos</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Pedidos</a>
@@ -23,10 +23,10 @@ export const Header = () => {
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Area Personal</a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a className="dropdown-item" href="#">Area Personal</a></li>
+                                    <li><a className="dropdown-item" href="/AreaPersonal">Area Personal</a></li>
                                     <li><a className="dropdown-item" href="/Register">Registrarse</a></li>
                                     <li><a className="dropdown-item" href="/Login">Login</a></li>
-                                    <li><a className="dropdown-item" href="#">Logout</a></li>
+                                    <li><a className="dropdown-item" href="/Logout">Logout</a></li>
                                 </ul>
                             </li>
                         </ul>
