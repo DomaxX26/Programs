@@ -7,7 +7,7 @@ export const Footer = () => {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12">
-                        <p>&copy; Copyright - Tenda Ciclista - <span className="fw-bold">Exercici Final React</span></p>
+                        <p>&copy; 2022 Copyright - Tenda Ciclista - <span className="fw-bold">Exercici Final React</span></p>
                     </div>
                 </div>
             </div>

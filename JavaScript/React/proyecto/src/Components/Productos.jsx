@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Table } from 'react-bootstrap';
 import * as yup from 'yup';
 import { useFormik } from "formik";
+import { useNavigate } from 'react-router-dom';
 
 const productos = yup.object().shape({
     nombre: yup.string().min(4, 'Muy Corto!').max(60, 'Muy largo!').required('Campo Obligatorio'),
@@ -13,10 +14,20 @@ function Productos() {
 
     const [data, setData] = useState([]);
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
+        validar();
         catchProduct();
     }, []);
+
+    function validar() {
+        var token = JSON.parse(localStorage.getItem("tk"))
+
+        if (token == null) {
+            navigate('/Login');
+        }
+    }
 
     const formik = useFormik({
         initialValues: { nombre: '', precio: 0, tallas: '' },
@@ -75,7 +86,7 @@ function Productos() {
             'tallas': tallas
         };
 
-        fetch("https://api.tendaciclista.ccpegoilesvalls.es/api/productos" + '/' + formik.values._id, {
+        fetch("https://api.tendaciclista.ccpegoilesvalls.es/api/productos"+'/'+formik.values._id, {
             method: 'PUT',
             body: JSON.stringify(putData),
             headers: {
@@ -85,7 +96,7 @@ function Productos() {
             },
         }).then(response => response.json())
             .then(datos => {
-                console.log(datos)
+                console.log(datos);
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -95,11 +106,11 @@ function Productos() {
 
     const valuesEdit = (id) => {
         const element = data.find(item => item._id === id); //Buscar el mismo id del array
-        let tallasString = "";
+        let tallasString = " ";
         formik.values._id = id;
         formik.values.nombre = element.nombre;
         formik.values.precio = element.precio;
-        element.tallas.forEach(itm => { tallasString = tallasString + itm + ' '})
+        element.tallas.forEach(itm => { tallasString = tallasString + itm + ' ' })
         formik.values.tallas = tallasString;
     }
 
@@ -134,7 +145,7 @@ function Productos() {
                                         }</td>
                                         <td>
                                             <button className="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#modalEditProduct" onClick={() => { valuesEdit(producto._id) }} ><i className="bi bi-pencil-square"></i></button>
-                                            <button className="btn btn-danger" onClick={() => {console.log("Producto a borrar: " + producto.nombre) }}><i className="bi bi-trash"></i></button>
+                                            <button className="btn btn-danger" onClick={() => { console.log("Producto a borrar: " + producto.nombre) }}><i className="bi bi-trash"></i></button>
                                         </td>
                                     </tr>
                                 )
@@ -179,7 +190,7 @@ function Productos() {
                                             value={formik.values.precio} />
                                         {formik.touched.precio && formik.errors.precio ? (<div className="text-danger d-flex justify-content-start">{formik.errors.precio}</div>) : null}
                                         <br />
-                                        <label htmlFor="imagen" className='d-flex justify-content-start'>Tallas</label>
+                                        <label htmlFor="tallas" className='d-flex justify-content-start'>Tallas</label>
                                         <input className="form-control"
                                             type="text"
                                             name="tallas"
